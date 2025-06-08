@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.9.0"
 }
 
 android {
@@ -51,12 +52,20 @@ dependencies {
     val mapsComposeVersion = "4.4.1"
     // Google Maps Compose
     implementation("com.google.maps.android:maps-compose:$mapsComposeVersion")
+    implementation("com.google.android.gms:play-services-location:21.0.1")
 
     // Utilidades de Google Maps para Jetpack Compose
     implementation("com.google.maps.android:maps-compose-utils:$mapsComposeVersion")
 
     // Widgets de Google Maps Compose
     implementation("com.google.maps.android:maps-compose-widgets:$mapsComposeVersion")
+
+
+    implementation("io.ktor:ktor-client-core:2.3.3")
+    implementation("io.ktor:ktor-client-okhttp:2.3.3")
+    implementation("io.ktor:ktor-client-content-negotiation:2.3.3")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -73,4 +82,5 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
 }
