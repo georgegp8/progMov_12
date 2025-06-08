@@ -52,7 +52,9 @@ dependencies {
     val mapsComposeVersion = "4.4.1"
     // Google Maps Compose
     implementation("com.google.maps.android:maps-compose:$mapsComposeVersion")
-    implementation("com.google.android.gms:play-services-location:21.0.1")
+    implementation ("com.google.android.gms:play-services-location:21.3.0")
+    implementation ("com.google.accompanist:accompanist-permissions:0.37.3")
+
 
     // Utilidades de Google Maps para Jetpack Compose
     implementation("com.google.maps.android:maps-compose-utils:$mapsComposeVersion")
@@ -60,12 +62,6 @@ dependencies {
     // Widgets de Google Maps Compose
     implementation("com.google.maps.android:maps-compose-widgets:$mapsComposeVersion")
 
-
-    implementation("io.ktor:ktor-client-core:2.3.3")
-    implementation("io.ktor:ktor-client-okhttp:2.3.3")
-    implementation("io.ktor:ktor-client-content-negotiation:2.3.3")
-    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.3")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
